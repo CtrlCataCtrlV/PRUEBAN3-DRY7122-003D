@@ -1,0 +1,57 @@
+{
+  "_exclude": [
+    "method",
+    "(Tunnel.*)"
+  ],
+  "interface": {
+    "GigabitEthernet1": {
+      "interface_is_ok": "YES",
+      "ip_address": "192.168.152.129",
+      "method": "DHCP",
+      "protocol": "up",
+      "status": "up"
+    },
+    "Loopback1": {
+      "interface_is_ok": "YES",
+      "ip_address": "unassigned",
+      "method": "unset",
+      "protocol": "up",
+      "status": "up"
+    },
+    "Loopback11": {
+      "interface_is_ok": "YES",
+      "ip_address": "11.11.11.11",
+      "method": "NVRAM",
+      "protocol": "up",
+      "status": "up"
+    },
+    "Loopback133": {
+      "interface_is_ok": "YES",
+      "ip_address": "10.133.133.133",
+      "method": "NVRAM",
+      "protocol": "up",
+      "status": "up"
+    },
+    "Loopback44": {
+      "interface_is_ok": "YES",
+      "ip_address": "44.44.44.44",
+      "method": "NVRAM",
+      "protocol": "up",
+      "status": "up"
+    },
+    "Loopback55": {
+      "interface_is_ok": "YES",
+      "ip_address": "172.16.55.1",
+      "method": "NVRAM",
+      "protocol": "up",
+      "status": "up"
+    },
+    "Loopback7": {
+      "interface_is_ok": "YES",
+      "ip_address": "66.66.66.66",
+      "method": "NVRAM",
+      "protocol": "down",
+      "status": "administratively down"
+    }
+  }
+}

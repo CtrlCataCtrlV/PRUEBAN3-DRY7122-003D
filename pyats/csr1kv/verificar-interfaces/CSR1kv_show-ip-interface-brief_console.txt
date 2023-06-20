@@ -1,0 +1,11 @@
++++ CSR1kv: executing command 'show ip interface brief' +++
+show ip interface brief
+Interface              IP-Address      OK? Method Status                Protocol
+GigabitEthernet1       192.168.152.129 YES DHCP   up                    up      
+Loopback1              unassigned      YES unset  up                    up      
+Loopback7              66.66.66.66     YES NVRAM  administratively down down    
+Loopback11             11.11.11.11     YES NVRAM  up                    up      
+Loopback44             44.44.44.44     YES NVRAM  up                    up      
+Loopback55             172.16.55.1     YES NVRAM  up                    up      
+Loopback133            10.133.133.133  YES NVRAM  up                    up      
+CSR1kv#

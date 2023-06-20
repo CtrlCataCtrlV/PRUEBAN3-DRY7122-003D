@@ -1,0 +1,213 @@
+Building configuration...
+
+Current configuration : 4597 bytes
+!
+! Last configuration change at 01:51:17 UTC Tue Jun 20 2023 by cisco
+!
+version 16.9
+service timestamps debug datetime msec
+service timestamps log datetime msec
+platform qfp utilization monitor load 80
+no platform punt-keepalive disable-kernel-core
+platform console virtual
+!
+hostname CSR1kv
+!
+boot-start-marker
+boot-end-marker
+!
+!
+!
+no aaa new-model
+!
+!
+!
+!
+!
+!
+!
+ip domain name example.netacad.com
+!
+!
+!
+login on-success log
+!
+!
+!
+!
+!
+!
+!
+subscriber templating
+! 
+! 
+! 
+! 
+!
+multilink bundle-name authenticated
+!
+!
+!
+!
+!
+crypto pki trustpoint TP-self-signed-2541887519
+ enrollment selfsigned
+ subject-name cn=IOS-Self-Signed-Certificate-2541887519
+ revocation-check none
+ rsakeypair TP-self-signed-2541887519
+!
+!
+crypto pki certificate chain TP-self-signed-2541887519
+ certificate self-signed 01
+  30820330 30820218 A0030201 02020101 300D0609 2A864886 F70D0101 05050030 
+  31312F30 2D060355 04031326 494F532D 53656C66 2D536967 6E65642D 43657274 
+  69666963 6174652D 32353431 38383735 3139301E 170D3233 30363132 31303332 
+  33305A17 0D333030 31303130 30303030 305A3031 312F302D 06035504 03132649 
+  4F532D53 656C662D 5369676E 65642D43 65727469 66696361 74652D32 35343138 
+  38373531 39308201 22300D06 092A8648 86F70D01 01010500 0382010F 00308201 
+  0A028201 01009E90 4635321B 3CD38528 C7926BC2 764FDCD2 BA173072 108EC5A3 
+  344F1EEC 87A1028D E92FCD61 9A4CA1B2 B4AE4C2A 970C8FCC 3726086F EF61EB2E 
+  5DE97394 05221B3A F962545D 0853EA70 99E54797 288FEE57 99090CC3 CAB4086D 
+  890D63E7 0BB1591A FE271DCE CA88FB5A BD7D4D8E 5C257DAE 86365E36 D57CE5A4 
+  AD03BFAD 1EAFA93F 759EA503 16A235CE FF2FD49F 8ED2A996 7262F9EB 6D505698 
+  B497B83E 125A0B4E C80AA180 4D5CB1D9 3C11A5F1 FB6ED336 2CA39CBE A22727B3 
+  4AB12400 C1F8C42D 48CACFEF D5674A0F 43495D58 755286D8 72DA4584 9FBEF1E1 
+  10CB0B6F BC36CD86 5F684C1C 36F273CF 29874DDD 65884702 C474CD0E 27AC9CB9 
+  F41B40B1 A6590203 010001A3 53305130 0F060355 1D130101 FF040530 030101FF 
+  301F0603 551D2304 18301680 14F5F3DA 60546110 CD93B309 5E396BA6 6E68D9E0 
+  EB301D06 03551D0E 04160414 F5F3DA60 546110CD 93B3095E 396BA66E 68D9E0EB 
+  300D0609 2A864886 F70D0101 05050003 82010100 3886A3D1 4AA356B8 13BB76FB 
+  DEE0120E A073C03C CB330C6E 346F8B18 2A74C8BD DF86DF0B 777A6715 A42DFD77 
+  E0CD0B85 A70C93BA 02212461 703E4149 00F9D85E 2BE87F05 F9A63A7B 1CB0412F 
+  771CCBB5 8B7D6ADF A50018C0 DB599C9A 2C4E87B3 F88089AA 2E43A9B4 EEECECDC 
+  D42E023E 3AC0C4C5 D5220C29 1096700D E7CDDD97 5E43E54C CD65D3C1 646C522D 
+  91B129AE 46140AC9 11D0405B A29C51AA 4C8412E9 DB6524B0 BFFA6747 0B16B1B5 
+  161C9BC3 1CC4014B E43F4D2E 74856CF7 064D6091 3B98FB1F 75FD103D 98C8D500 
+  856F96EB 3DEB79F2 81C0CE32 1892B6FD 211FA11E 24F48886 2F0B23A8 F5CDDA86 
+  2228C277 D9B178E5 03ACD8AC 5F01300F 09695BEB
+  	quit
+!
+!
+!
+!
+!
+!
+!
+!
+license udi pid CSR1000V sn 9WODNXGHS8P
+no license smart enable
+diagnostic bootup level minimal
+!
+spanning-tree extend system-id
+!
+netconf-yang
+!
+restconf
+!
+username cisco privilege 15 password 0 cisco123!
+!
+redundancy
+!
+!
+!
+!
+!
+!
+! 
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+! 
+! 
+!
+!
+interface Loopback1
+ description IPv6 ADDRESS
+ no ip address
+ ipv6 address FE80::1 link-local
+ ipv6 address 3001:ABCD:ABCD:1::1/128
+!
+interface Loopback7
+ description Mi primera loopback
+ ip address 66.66.66.66 255.255.255.255
+ shutdown
+!
+interface Loopback11
+ ip address 11.11.11.11 255.255.255.255
+!
+interface Loopback44
+ description Loopback interface
+ ip address 44.44.44.44 255.255.255.0
+!
+interface Loopback55
+ description Catalina Gonzalez
+ ip address 172.16.55.1 255.255.255.0
+!
+interface Loopback133
+ description Catalina Gonzalez
+ ip address 10.133.133.133 255.255.255.255
+!
+interface GigabitEthernet1
+ description IPv6 ADDRESS
+ ip address dhcp
+ negotiation auto
+ ipv6 address FE80::1:1 link-local
+ ipv6 address 2001:DB8:ACAD:1::1/64
+ no mop enabled
+ no mop sysid
+!
+ip forward-protocol nd
+no ip http server
+ip http authentication local
+ip http secure-server
+!
+!
+!
+!
+!
+!
+control-plane
+!
+!
+!
+!
+!
+banner motd ^C
+*                                           *
+**                                         **
+***                                       ***
+***  Cisco Networking Academy             ***
+***                                       ***
+***  This software is provided for        ***
+***   Educational Purposes                ***
+***    Only in Networking Academies       ***
+***                                       ***
+**                                         **
+*                                           *
+^C
+!
+line con 0
+ logging synchronous
+ stopbits 1
+line vty 0 4
+ login local
+ transport input ssh
+line vty 5 15
+ login local
+ transport input ssh
+!
+!
+!
+!
+!
+!
+end

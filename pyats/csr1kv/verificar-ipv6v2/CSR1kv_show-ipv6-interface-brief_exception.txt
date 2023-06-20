@@ -1,0 +1,10 @@
+Issue with the parser show ipv6 interface brief
+
+Traceback (most recent call last):
+  File "src/genie/cli/commands/parser.py", line 293, in genie.cli.commands.parser.ParserCommand.parse
+  File "src/genie/conf/base/device.py", line 552, in genie.conf.base.device.Device.parse
+  File "src/genie/conf/base/device.py", line 579, in genie.conf.base.device.Device._get_parser_output
+  File "src/genie/metaparser/_metaparser.py", line 271, in genie.metaparser._metaparser.MetaParser.parse
+  File "/home/devasc/.local/lib/python3.8/site-packages/genie/libs/parser/iosxe/show_interface.py", line 2766, in cli
+    ret_dict[intf]['joined_group_addresses'] = sorted(joined_group)
+UnboundLocalError: local variable 'intf' referenced before assignment
